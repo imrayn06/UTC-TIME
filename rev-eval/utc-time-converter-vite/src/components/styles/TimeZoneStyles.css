@@ -1,0 +1,184 @@
+/* General layout and background */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1c1c1c; /* Dark background */
+  font-family: Arial, sans-serif;
+}
+
+.app {
+  background-color: #1c1c1c;
+  color: white;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  width: 100%; /* Full width */
+  max-width: 800px; /* Limit the max width */
+  margin: 0 auto; /* Center horizontally */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+}
+
+/* Container for time zones */
+.time-zone-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  background-color: #252525;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Smooth shadow */
+}
+
+/* Card for each time zone */
+.time-zone-card {
+  background-color: #2a2a2a; /* Card background */
+  border-radius: 10px;
+  padding: 20px;
+  position: relative;
+  transition: background-color 0.3s ease;
+}
+
+.time-zone-card:hover {
+  background-color: #333; /* Slight hover effect */
+}
+
+/* Header for time zone information */
+.time-zone-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.time-zone-header h2 {
+  margin: 0;
+  font-size: 1.5em;
+  color: #f0f0f0;
+  font-weight: bold;
+}
+
+.time-zone-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  color: #ccc;
+}
+
+/* Time display (hours and minutes) */
+.time-display {
+  font-size: 2.5em;
+  font-weight: bold;
+  text-align: right;
+  color: #e0e0e0;
+}
+
+/* Date below the time */
+.time-date {
+  font-size: 0.9em;
+  color: #aaa;
+}
+
+/* Time slider section */
+.time-slider {
+  margin-top: 15px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.slider {
+  width: 100%;
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+  background: linear-gradient(to right, #00214d, #f0b30f, #00214d); /* Day to night gradient */
+  border-radius: 5px;
+  height: 12px; /* Increased height for better appearance */
+  outline: none;
+  transition: background 0.3s ease;
+}
+
+/* Custom slider thumb */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px; /* Custom size for the thumb */
+  height: 25px;
+  background: #ccc; /* Light gray */
+  border-radius: 4px; /* Rectangular shape with soft corners */
+  cursor: pointer;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5); /* Small shadow */
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Time labels below slider */
+.time-range {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #aaa;
+  margin-top: 5px;
+}
+
+/* Region label input */
+.region-input-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.region-input {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #444;
+  color: #fff;
+  width: 80%;
+  text-align: center;
+}
+
+.add-button {
+  padding: 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.add-button:hover {
+  background-color: #45a049;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .time-zone-container {
+    padding: 15px;
+    max-width: 100%;
+  }
+
+  .time-zone-card {
+    padding: 15px;
+  }
+
+  .time-display {
+    font-size: 2em;
+  }
+}
